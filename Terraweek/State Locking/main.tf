@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e6d37f09b8dc55858fa6c088667c6b09b4a2ec6aed727cf41603b6d5956e05b
-size 222
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "my_ec2_instance" {
+    # count = 2
+  ami           = "ami-04a0ae173da5807d3"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "terraweek-instance"
+  }
+}

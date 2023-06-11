@@ -4,3 +4,5 @@
 /list2.txt
 /terraform-auto-generated.txt
 .terraform/
+/.terraform.lock.hcl
+

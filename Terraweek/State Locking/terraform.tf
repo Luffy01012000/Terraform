@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73e61effe229e8a8cb8b0ba02cfd35202eab481005adc3cbc8073ff768d1e5e3
-size 337
+terraform {
+  required_providers {
+    aws ={
+        source = "hashicorp/aws"
+        version = "4.66.1"
+    }
+  }
+# }
+
+# terraform {
+  
+backend "s3" {
+    bucket = "terraweek-remote--state-bucket"
+    key = "terraform.tfstate" #adding state, we use key to do so
+    region = "us-east-1"
+    dynamodb_table = "terraweek_state-table"
+}
+}

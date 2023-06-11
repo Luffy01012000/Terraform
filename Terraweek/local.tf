@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04ee0ffaf871529a3b2bdfe9ea1534ff2d1dd99d063b08ac5ee757368b826273
-size 407
+resource "local_file" "terrademo" {
+    filename = "/media/goku/985b1c56-53fe-43c7-b6b8-8be304595cd7/Downloads/Devops/TrainWithShubham/Free Terraform Course/practice/terrademo.txt"
+    content = "learning terraform..."
+  
+}
+
+resource "random_string" "ran_str" {
+  length = 16
+  special = true
+  override_special = "!#$%&*()-_+=[]{}<>:?"
+}
+
+output "ran_str" {
+    value = random_string.ran_str[*].result
+  
+}
