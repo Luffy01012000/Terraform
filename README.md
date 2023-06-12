@@ -1,6 +1,6 @@
 # Terraform
-> **First** we need to install terraform cli
-> **Second** we also need aws cli to give command to our aws console
+> **First** we need to install terraform cli\
+> **Second** we also need aws cli to give command to our aws console\
 > **Third** we need to configure our aws access key & access key id
 
 ## To run all this .tf files type terraform init in cli
